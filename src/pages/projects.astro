@@ -1,0 +1,59 @@
+---
+import ProjectBox from "../components/ProjectBox.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="projects">
+    <section class="hero">
+        <h1>Projects</h1>
+        <h1>Projects</h1>
+        <h1>Projects</h1>
+    </section>
+    <ul id="cards">
+        <li>
+            <ProjectBox
+                img="https://nbrook.netlify.app/assets/img/texture-primary.jpg"
+                text="1"
+                href=""
+                tablet="hey , ecoment"
+            />
+        </li>
+    </ul>
+</Layout>
+
+<style>
+    .hero {
+        height: 80dvh;
+        overflow: hidden;
+        display: grid;
+        place-content: center;
+        user-select:none;
+    }
+
+    .hero h1 {
+        font-size: clamp(10vw, 20vw, 20vw);
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    .hero h1:nth-child(2) {
+        color: var(--primary);
+        -webkit-text-stroke: 5px var(--text);
+        paint-order: stroke fill;
+    }
+    li {
+        position: sticky;
+        top: 10dvh;
+        width: 100%;
+        margin-top: 10dvh;
+    }
+
+    #cards {
+        list-style: none;
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 10dvh;
+        margin-bottom: 10dvh;
+    }
+</style>

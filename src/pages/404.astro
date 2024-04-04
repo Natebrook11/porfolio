@@ -1,0 +1,269 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout title="404 Error — Nate Brook.">
+    <section class="hero">
+            <div class="digital-ball">
+                <div class="globe">
+                    <div class="globe-wrap">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle-hor"></div>
+                        <div class="circle-hor-middle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="digital-ball">
+                <div class="globe">
+                    <div class="globe-wrap">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle-hor"></div>
+                        <div class="circle-hor-middle"></div>
+                    </div>
+                </div>
+            </div>
+        <div
+            style="
+        position: absolute;
+        bottom: 80px;
+        left: 0;"
+            class="marquee"
+        >
+            <div class="marquee__inner">
+                <h1>— 404</h1>
+                <h1>— 404</h1>
+                <h1>— 404</h1>
+                <h1>— 404</h1>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+
+<style>
+    /* <------------- Hero -------------> */
+    .hero {
+        width: 100%;
+        overflow: hidden;
+        background-color: var(--primary);
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero h1 {
+        color: var(--text);
+        font-family: "Inter";
+        font-size: 15vw;
+        text-wrap: nowrap;
+    }
+
+    .hero .marquee {
+        --marquee-width: 100vw;
+        --offset: 0vw;
+        --move-initial: calc(-25% + var(--offset));
+        --move-final: calc(-50% + var(--offset));
+        width: var(--marquee-width);
+        overflow: hidden;
+        pointer-events: none;
+        position: relative;
+
+        animation: appearbottom 2s;
+        animation-delay: 2s;
+    }
+
+    .hero .marquee__inner {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 10s linear infinite;
+        gap: 2vw;
+        animation-play-state: running;
+    }
+
+    .hero .marquee {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translate3d(var(--move-initial), 0, 0);
+        }
+
+        100% {
+            transform: translate3d(var(--move-final), 0, 0);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .hero .marquee {
+            --marquee-width: 100vw;
+            --offset: 0vw;
+            --move-initial: calc(-25% + var(--offset));
+            --move-final: calc(-50% + var(--offset));
+            width: var(--marquee-width);
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 50dvh;
+            left: 0;
+        }
+
+        .hero .digital-ball:nth-child(2) {
+        z-index: 500;
+        position: absolute ;
+        bottom: 10dvh;
+        display: block !important;
+        background: transparent;
+        transform: translate(0%, 0%);
+        min-width: clamp(20dvh, 50vw, 50dvh);
+        min-height: clamp(20dvh, 50vw, 50dvh);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 6;
+        mix-blend-mode: difference
+    }
+    }
+
+    .hero .digital-ball:nth-child(1) {
+        z-index: 500;
+        position: absolute;
+        top: 10dvh;
+        background: transparent;
+        transform: translate(0%, 0%);
+        min-width: clamp(20dvh, 50vw, 50dvh);
+        min-height: clamp(20dvh, 50vw, 50dvh);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+
+    .hero .digital-ball:nth-child(2) {
+        z-index: 500;
+        position: absolute;
+        bottom: 10dvh;
+        display: none;
+        background: transparent;
+        transform: translate(0%, 0%);
+        min-width: clamp(20dvh, 50vw, 50dvh);
+        min-height: clamp(20dvh, 50vw, 50dvh);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .hero .globe {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, 0%);
+        border-radius: 50%;
+        overflow: hidden;
+        will-change: transform;
+    }
+
+    .hero .globe-wrap {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: globe 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 0px 0.125em var(--secondary);
+        
+    }
+
+    .hero .globe .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        box-shadow: inset 0.1em 0px 0px 0.08em var(--secondary);
+        animation: circle1 2.7s linear infinite;
+        font-size: 0.75em;
+    }
+
+    @keyframes circle1 {
+        0% {
+            border-radius: 50%;
+            box-shadow: inset 0.1em 0px 0px 0.08em var(--secondary);
+            width: 100%;
+        }
+
+        49% {
+            border-radius: 50%;
+            box-shadow: inset 0.1em 0px 0px 0.08em var(--secondary);
+            background: transparent;
+        }
+
+        50% {
+            border-radius: 0%;
+            width: 0.175em;
+            background: var(--secondary);
+        }
+
+        51% {
+            border-radius: 50%;
+            box-shadow: inset -0.1em 0px 0px 0.08em var(--secondary);
+            background: transparent;
+        }
+
+        100% {
+            border-radius: 50%;
+            box-shadow: inset -0.1em 0px 0px 0.08em var(--secondary);
+            width: 100%;
+        }
+    }
+
+    .hero .globe :nth-child(1) {
+        animation-delay: -1.8s;
+    }
+
+    .hero .globe :nth-child(2) {
+        animation-delay: -0.9s;
+    }
+
+    .hero .globe .circle-hor {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 55%;
+        box-shadow: inset 0px 0px 0px 0.15em var(--secondary);
+        font-size: 0.75em;
+    }
+
+    .hero .globe .circle-hor-middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        transform: translate(-50%, -50%);
+        border-radius: 0%;
+        height: 0.15em;
+        background: var(--secondary);
+        font-size: 0.75em;
+    }
+</style>

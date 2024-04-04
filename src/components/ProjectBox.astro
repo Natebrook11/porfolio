@@ -1,0 +1,85 @@
+---
+import Tablet from "./Tablet.astro";
+
+interface Props {
+    text: string;
+    img: string;
+    tablet: string;
+    href: string;
+}
+
+const { text, img, tablet, href } = Astro.props;
+
+const tabletsArray = tablet.split(",").map((tabletItem: string) => tabletItem.trim());
+
+---
+
+<a href={href}>
+    <article class="box">
+        <img src={img} alt="Project preview image" />
+        <div class="box-info">
+            <h2>{text}</h2>
+            <br />
+            <div class="flex gap-3">
+                {tabletsArray.map((tabletItem: string, index: number) => (
+                    <Tablet key={index}>{tabletItem}</Tablet>
+                ))}
+            </div>
+        </div>
+    </article>
+</a>
+
+
+<style>
+    /* <------------- Box -------------> */
+
+    .box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        text-align: left;
+        transition: all ease 0.25s;
+        z-index: 0;
+        max-height: 800px;
+    }
+
+    .box:hover {
+       cursor: pointer;
+    }
+
+    /* <------------- Box IMG -------------> */
+
+    .box img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* <------------- Box title -------------> */
+
+    .box-info h2 {
+        font-weight: 600;
+    }
+
+    /* <------------- Box info -------------> */
+
+    .box-info {
+        padding: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+        z-index: 9;
+    }
+
+    /* <------------- Shadow effect -------------> */
+
+    .box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000000dc, transparent);
+    }
+</style>

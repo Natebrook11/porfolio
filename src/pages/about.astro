@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About me — Nate Brook.">
+    <section class="hero">
+        <h1>About</h1>
+        <h1>About</h1>
+        <h1>About</h1>
+    </section>
+    <section class="split">
+        <h1>
+            NATE BROOK <svg
+                width="221"
+                height="60"
+                viewBox="0 0 221 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1 56.7067C10.8075 50.0844 19.3507 42.7874 28.9444 36.0467C35.008 31.7864 41.1391 27.462 47.9722 23.634C48.0147 23.6102 51.7154 21.1824 50.9722 22.6303C45.2199 33.838 38.9823 45.1194 37.1667 56.874C37.0362 57.7187 36.308 59.9701 38.5556 58.5302C43.1104 55.612 46.4246 51.8503 49.8889 48.4762C56.1685 42.36 62.4203 36.2365 68.8889 30.1917C70.5386 28.6501 72.1643 26.7655 74.1667 25.3403C74.9947 24.751 73.8812 26.8775 73.6111 27.6322C72.076 31.9217 70.8064 36.243 69.8889 40.597C69.4175 42.8339 69 45.0966 69 47.3554C69 47.9451 70.2997 46.4714 70.8889 46.0003C75.2698 42.4977 79.2882 38.8476 83.4722 35.2605C86.3316 32.809 90.2024 28.3232 94.8611 26.8125C96.126 26.4023 95.317 28.5547 95.0556 29.4054C93.8966 33.1774 92.7626 36.9197 92.2222 40.7475C92.0966 41.6376 91.2677 43.968 92.4444 43.4241C95.4019 42.0572 97.717 39.6975 100.056 38.004C105.403 34.1315 110.958 30.3503 116.944 26.8292C117.869 26.2854 120.377 24.864 121.722 24.2864C122.045 24.148 122.774 23.9244 122.889 24.1526C123.728 25.8232 121.832 29.0377 121.389 30.6099C120.504 33.75 119.544 36.9004 119.111 40.0784C118.972 41.1003 118.928 41.4025 120.278 40.5802C124.544 37.9818 128.404 35.139 132.444 32.4166C136.42 29.7384 140.635 26.2831 145.722 24.2864C147.995 23.3943 145.215 27.5528 144.556 29.1378C142.437 34.2287 140.496 39.3786 139.444 44.5951C139.411 44.7634 137.964 48.8108 140.667 47.9409C149.552 45.081 157.912 39.665 165.111 35.662C184.724 24.7569 201.989 12.8155 220 1"
+                    stroke="#CE1B1B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    style="stroke-dashoffset: 0px;"></path>
+            </svg>
+        </h1>
+        <article>
+            <h3>
+                a young enthusiast of computer science and technology. He
+                started at the age of 10 when he had his first computer at home.
+                Since then, he has been learning and gradually began to create
+                his own digital applications.
+            </h3>
+            <br /><br />
+            <h4>The name</h4>
+            <br />
+            <p>
+                The name "Nate Brook" holds a significant place in his online
+                persona, with its origins tracing back to his immersion in the
+                world of GTAV roleplay. One day, he bestowed this distinctive
+                moniker upon his virtual character, and ever since, it has
+                served as his enduring pseudonym and internet alias.
+            </p>
+            <br /><br />
+            <h4>Aptitudes</h4>
+            <br />
+            <ul>
+                <li>
+                    Creative thinker with a proven ability to solve problems
+                </li>
+                <li>Continuous learning and professional development</li>
+                <li>Strong communication skills, both verbal and written</li>
+                <li>Ability to work effectively in a team environment</li>
+                <li>Adaptability and flexibility in various situations</li>
+            </ul><br /><br />
+            <h4>Languages</h4>
+            <br />
+            <p>💃 Spanish <span>Native</span></p>
+            <div style="width:90%;" class="skills">90%</div>
+            <br />
+            <p>💂 English <span>Professional (B2)</span></p>
+            <div style="width:70%;" class="skills">70%</div>
+            <br />
+            <p>😁 Euskera <span>Professional (B2)</span></p>
+            <div style="width:65%;" class="skills">65%</div>
+        </article>
+    </section>
+    <section class="row">
+        <h1>My services</h1>
+        <div class="flex gap-8 my-7">
+            <article>
+                <h4>Developer</h4>
+                As a web developer, I have over 2 years of experience in the field.
+                During this time, I have successfully created numerous web applications,
+                although the majority of them have been for personal and hobbyist
+                purposes.
+            </article>
+            <article>
+                <h4>Designer</h4>
+                As a designer, I have a year of experience, which I consider foundational
+                for crafting products that meet the specific needs of clients. Typically,
+                I adopt an adaptive approach, allowing the design process to evolve
+                organically based on the unique requirements of each project.
+            </article>
+            <article>
+                <h4>Others</h4>
+                Regarding my other skills and capabilities, there's a wide array
+                of things I can accomplish. However, when it comes to technology,
+                I possess significant expertise in numerous applications as well
+                as 3D design.
+            </article>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .hero {
+        height: 80dvh;
+        overflow: hidden;
+        display: grid;
+        place-content: center;
+        
+        user-select:none;
+    }
+
+    .hero h1 {
+        font-size: clamp(20vw, 30vw, 30vw);
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    .hero h1:nth-child(1) {
+        color: var(--primary);
+        -webkit-text-stroke: 5px var(--text);
+        paint-order: stroke fill;
+    }
+    .hero h1:nth-child(3) {
+        color: var(--primary);
+        -webkit-text-stroke: 5px var(--text);
+        paint-order: stroke fill;
+    }
+
+    .split {
+        margin-top: 10dvh;
+        margin-bottom: 10dvh;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .split article {
+        margin-top: 10dvh;
+        width: 50%;
+    }
+
+    .split article h4 {
+    }
+
+    .split h1 svg {
+        margin-top: -30px;
+    }
+
+    .split h4 {
+        font-weight: 750;
+        font-family: "Inter";
+        font-size: clamp(10px, 17vw, 20px);
+    }
+
+    .split ul {
+        margin-left: 50px;
+        list-style: disc;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .split {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .split article {
+            margin-top: 10dvh;
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    .skills {
+        text-align: right; /* Right-align text */
+        padding: 10px;
+        border-radius: 50px;
+        color: var(--text2); /* White text color */
+        background: var(--secondary);
+    }
+
+    .split article p span {
+        font-size: 10px;
+    }
+
+    .row {
+        margin-top: 10dvh;
+        margin-bottom: 10dvh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        height: 50dvh;
+    }
+
+    .row h1 {
+        width: 100%;
+        height: 20dvh;
+    }
+
+    .row h4 {
+        font-weight: 750;
+        font-family: "Inter";
+        font-size: clamp(10px, 17vw, 20px);
+        margin-bottom: 2dvh;
+    }
+
+    @media screen and (max-width: 800px){
+        .row div{
+            flex-direction: column;
+        }
+    }
+</style>

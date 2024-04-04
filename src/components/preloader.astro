@@ -1,0 +1,134 @@
+---
+
+---
+
+<section class="preloader"><div class="text">Nate Brook</div></section>
+<section class="subpreloader"></section>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+
+    @keyframes changeFonts {
+        0% {
+            font-family: "Indie Flower", cursive;
+        }
+
+        10% {
+            font-family: "Lobster", cursive;
+        }
+
+        20% {
+            font-family: "Roboto", sans-serif;
+        }
+
+        30% {
+            font-family: "Pacifico", cursive;
+        }
+
+        40% {
+            font-family: "Courgette", cursive;
+        }
+
+        50% {
+            font-family: "Shadows Into Light", cursive;
+        }
+
+        60% {
+            font-family: "Great Vibes", cursive;
+        }
+
+        70% {
+            font-family: "Kaushan Script", cursive;
+        }
+
+        80% {
+            font-family: "Quicksand", sans-serif;
+        }
+
+        90% {
+            font-family: "Homemade Apple", cursive;
+        }
+
+        100% {
+            font-family: "Arial", sans-serif;
+        }
+    }
+
+    /* Apply the animation to an element */
+    .preloader {
+        animation: changeFonts linear 2s infinite;
+        font-family: "Indie Flower", cursive;
+        width: 200%;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        display: grid;
+        place-items: center;
+        z-index: 9;
+        background-color: var(--primary);
+        transition: all ease 1s;
+        overflow: hidden;
+
+        transform: translate(-50% / 2, 0%);
+        
+        user-select:none;
+    }
+
+    .text {
+        font-size: clamp(6vw, 6.5vw, 7vw);
+    }
+
+    .subpreloader {
+        width: 200%;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        z-index: 8;
+        display: grid;
+        place-items: center;
+        background-color: var(--aux);
+        transition: all ease 0.8s;
+        overflow: hidden;
+
+        transform: translate(-50% / 2, 0%);
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.querySelector(".preloader");
+        const preloadertext = document.querySelector(".text");
+        const subpreloader = document.querySelector(".subpreloader");
+
+        setTimeout(function () {
+            hideElement(preloader, "0", "0px 0px 200% 200%", "0");
+            hideElement(preloadertext, "0", null, "0");
+        }, 2000);
+
+        setTimeout(function () {
+            hideElement(subpreloader, "0", "0px 0px 200% 200%", null);
+        }, 2250);
+
+        function hideElement(element, height, borderRadius, opacity) {
+            if (element) {
+                element.style.height = height;
+                if (borderRadius) {
+                    element.style.borderRadius = borderRadius;
+                }
+                if (opacity) {
+                    element.style.opacity = opacity;
+                }
+            }
+        }
+    });
+</script>
